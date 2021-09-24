@@ -13,9 +13,9 @@ Additional README details can be found [here](https://github.com/PrimeAcademy/re
 
 ### Base Mode
 
-- [ ] set up redux store
-- [ ] set up routes in App.jsx
-- [ ] create database
+- [x] set up redux store
+- [x] set up routes in App.jsx
+- [x] create database
 - [ ] create pages
     - [ ] each page has a question, input field, and Next button
     - [ ] create /feeling page

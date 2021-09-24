@@ -8,7 +8,7 @@ function FeelingPage() {
     //tell the button what to do when clicked
     const handleClickEvent = () => {
         console.log('hello');
-        history.push('/feeling'); //move to the designated page
+        history.push('/understanding'); //move to the designated page
     }
 
     return (
@@ -20,4 +20,4 @@ function FeelingPage() {
     );
 }
 
-export default HomePage;
+export default FeelingPage;

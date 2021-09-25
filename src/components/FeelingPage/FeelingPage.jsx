@@ -7,30 +7,30 @@ function FeelingPage() {
     const dispatch = useDispatch();
     //attach a variable to useHistory method
     const history = useHistory();
+    //set a variable to set the input
     const [numberChoice, setNumberChoice] = useState(0);
 
     //tell the button what to do when clicked
     const handleClickEvent = (event) => {
-        event.preventDefault();
-        console.log('hello', numberChoice);
-        const action = ({type: 'ADD_FORM_INPUT', payload: numberChoice})
-        dispatch(action);
-
-        // history.push('/understanding'); //move to the designated page
-
+        event.preventDefault(); //stop page from refreshing
+        console.log('feeling choice', numberChoice);
+        const action = ({ type: 'ADD_FEELING_INPUT', payload: numberChoice })
+        dispatch(action); //send to redux
+        history.push('/understanding'); //move to the designated page
     }
 
     return (
         <>
             <h5>1 of 4 pages</h5>
             <p>How are you feeling today?</p>
+            {/* form to pick a radio button from 1-5. on submit, go to handleClickEvent function */}
             <form onSubmit={handleClickEvent}>
                 <div>
                     <input
                         onChange={(event) => setNumberChoice(event.target.value)}
                         type="radio"
                         value="1"
-                        name="feeling-value" /> 1
+                        name="feeling-value" />1
                     <input
                         onChange={(event) => setNumberChoice(event.target.value)}
                         type="radio"
@@ -56,7 +56,6 @@ function FeelingPage() {
                 <button type="submit">Next</button>
             </form>
         </>
-
     );
 }
 

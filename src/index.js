@@ -17,12 +17,18 @@ const defaultSurveyData = {
 //reducer to temporarily store survery answers
 const surveyData = (state = defaultSurveyData, action) => {
     //in surveyData reducer
-    if (action.type === 'ADD_FORM_INPUT') {
+    if (action.type === 'ADD_FEELING_INPUT') {
         const objectCopy = {...state};
         objectCopy.feeling = action.payload;
         console.log(objectCopy);
         return objectCopy;
-        
+        // return {...state, action.payload} //this breaks it and not sure why
+    } 
+    else if (action.type === 'ADD_UNDERSTANDING_INPUT') {
+        const objectCopy = { ...state };
+        objectCopy.understanding = action.payload;
+        console.log(objectCopy);
+        return objectCopy;
     }
     return state;
 }

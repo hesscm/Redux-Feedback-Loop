@@ -7,9 +7,23 @@ import logger from 'redux-logger';
 import { createStore, combineReducers, applyMiddleware } from 'redux';
 import { Provider } from 'react-redux';
 
+const defaultSurveyData = {
+    feeling: 0,
+    understanding: 0,
+    supported: 0,
+    comments: ''
+};
+
 //reducer to temporarily store survery answers
-const surveyData = (state = {}, action) => {
+const surveyData = (state = defaultSurveyData, action) => {
     //in surveyData reducer
+    if (action.type === 'ADD_FORM_INPUT') {
+        const objectCopy = {...state};
+        objectCopy.feeling = action.payload;
+        console.log(objectCopy);
+        return objectCopy;
+        
+    }
     return state;
 }
 

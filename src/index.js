@@ -11,7 +11,7 @@ import { Provider } from 'react-redux';
 const defaultSurveyData = {
     feeling: 0,
     understanding: 0,
-    supported: 0,
+    support: 0,
     comments: ''
 };
 
@@ -35,7 +35,7 @@ const surveyData = (state = defaultSurveyData, action) => {
     }
     else if (action.type === 'ADD_SUPPORTED_INPUT') {
         const objectCopy = { ...state };
-        objectCopy.supported = action.payload;
+        objectCopy.support = action.payload;
         console.log(objectCopy);
         return objectCopy;
     }

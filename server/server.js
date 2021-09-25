@@ -2,6 +2,7 @@ const express = require('express');
 const app = express();
 //BODYPARSER IS DEPRECATED
 // const bodyParser = require('body-parser');
+const feedbackRouter = require('./routes/feedback.router')
 const PORT = process.env.PORT || 5000;
 
 /** ---------- MIDDLEWARE ---------- **/

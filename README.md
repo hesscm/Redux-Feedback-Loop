@@ -24,8 +24,8 @@ Additional README details can be found [here](https://github.com/PrimeAcademy/re
     - [x] create comments page
     - [x] create review page
         - [x] displays their data with a Submit button
-        - [ ] review page button also posts the data to the server
-        - [ ] create a axios post request
+        - [x] review page button also posts the data to the server
+        - [x] create a axios post request
         - [x] create a post route in the server
     - [ ] create thank you page(this button routes to beginning)
 - [ ] all inputs are validated except for comments page

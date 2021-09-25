@@ -8,6 +8,7 @@ import CommentsPage from '../CommentsPage/CommentsPage';
 import UnderstandingPage from '../UnderstandingPage/UnderstandingPage';
 import SupportedPage from '../SupportedPage/SupportedPage';
 import ReviewPage from '../ReviewPage/ReviewPage';
+import ThankYouPage from '../ThankYouPage/ThankYouPage';
 
 function App() {
 
@@ -41,6 +42,10 @@ function App() {
 
         <Route path="/review">
           <ReviewPage />
+        </Route>
+
+        <Route path="/thanks">
+          <ThankYouPage />
         </Route>
       </Router>
     </div>

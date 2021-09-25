@@ -1,11 +1,12 @@
-//Page 5 and last of survey
+//Page 5 of survey
 import { useHistory } from 'react-router-dom';
-import { useState } from 'react';
-import { useSelector } from 'react-redux';
+import { useSelector, useDispatch } from 'react-redux';
 import axios from 'axios';
 
 function ReviewPage() {
     const reduxStore = useSelector(store => store);
+    const dispatch = useDispatch();
+    const history = useHistory();
 
     const handleCompleteSurvey = () => {
         console.log(reduxStore.surveyData)
@@ -19,7 +20,9 @@ function ReviewPage() {
                 comments: reduxStore.surveyData.comments
             }
         }).then((response) => {
-            alert('Thank you for your feedback!');
+            const action = {type: 'CLEAR_ALL_INPUTS'}
+            dispatch(action);
+            history.push('/thanks');
         }).catch((error) => {
             alert('Error in handleCompleteSurvey.')
             console.log(error);

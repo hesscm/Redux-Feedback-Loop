@@ -45,6 +45,9 @@ const surveyData = (state = defaultSurveyData, action) => {
         console.log(objectCopy);
         return objectCopy;
     }
+    else if (action.type === 'CLEAR_ALL_INPUTS') {
+        return defaultSurveyData;
+    }
     return state;
 }
 

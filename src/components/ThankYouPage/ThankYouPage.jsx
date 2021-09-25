@@ -15,7 +15,7 @@ function ThankYouPage() {
 
     return (
         <>
-            <h1>Thank You!</h1>
+            <h1>Thank You! Your feedback has been submitted!</h1>
             <button onClick={handleClickEvent}>Leave New Feedback</button>
         </>
 

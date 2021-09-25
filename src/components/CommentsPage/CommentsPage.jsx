@@ -29,7 +29,7 @@ function CommentsPage() {
                         onChange={(event) => setCommentsChoice(event.target.value)}
                         type="text"
                         value={commentsChoice}
-                        placeholder="Anything else?"
+                        placeholder="Anything else? This part is optional."
                         name="comments-value" />
                 <br />
                 <button type="submit">Next</button>

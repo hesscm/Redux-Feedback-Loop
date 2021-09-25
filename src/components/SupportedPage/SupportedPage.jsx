@@ -13,10 +13,15 @@ function SupportedPage() {
     //tell the button what to do when clicked
     const handleClickEvent = (event) => {
         event.preventDefault(); //stop page from refreshing
-        console.log('supported choice', numberChoice);
-        const action = ({ type: 'ADD_SUPPORTED_INPUT', payload: numberChoice })
-        dispatch(action); //send to redux
-        history.push('/comments'); //move to the designated page
+        if (numberChoice == 0) {
+            alert('Please select a number.')
+        }
+        else {
+            console.log('supported choice', numberChoice);
+            const action = ({ type: 'ADD_SUPPORTED_INPUT', payload: numberChoice })
+            dispatch(action); //send to redux
+            history.push('/comments'); //move to the designated page
+        }
     }
 
     return (

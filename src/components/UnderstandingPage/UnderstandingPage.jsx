@@ -13,10 +13,16 @@ function UnderstandingPage() {
     //tell the button what to do when clicked
     const handleClickEvent = (event) => {
         event.preventDefault(); //stop page from refreshing
-        console.log('understanding choice', numberChoice);
-        const action = ({ type: 'ADD_UNDERSTANDING_INPUT', payload: numberChoice })
-        dispatch(action); //send to redux
-        history.push('/supported'); //move to the designated page
+        //ensure the user selects an option
+        if (numberChoice == 0) {
+            alert('Please select a number.')
+        }
+        else {
+            console.log('understanding choice', numberChoice);
+            const action = ({ type: 'ADD_UNDERSTANDING_INPUT', payload: numberChoice })
+            dispatch(action); //send to redux
+            history.push('/supported'); //move to the designated page
+        }
     }
 
     return (

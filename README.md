@@ -21,12 +21,12 @@ Additional README details can be found [here](https://github.com/PrimeAcademy/re
     - [x] create /feeling page
     - [x] create /understanding page
     - [x] create supported page
-    - [ ] create comments page
-    - [ ] create review page
-        - [ ] displays their data with a Submit button
+    - [x] create comments page
+    - [x] create review page
+        - [x] displays their data with a Submit button
         - [ ] review page button also posts the data to the server
         - [ ] create a axios post request
-        - [ ] create a post route in the server
+        - [x] create a post route in the server
     - [ ] create thank you page(this button routes to beginning)
 - [ ] all inputs are validated except for comments page
 - [ ] temporarily store answers in a redux store

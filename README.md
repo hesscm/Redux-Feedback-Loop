@@ -17,7 +17,7 @@ Additional README details can be found [here](https://github.com/PrimeAcademy/re
 - [x] set up routes in App.jsx
 - [x] create database
 - [x] create pages
-    - [ ] each page has a question, input field, and Next button
+    - [x] each page has a question, input field, and Next button
     - [x] create /feeling page
     - [x] create /understanding page
     - [x] create supported page

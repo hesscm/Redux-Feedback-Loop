@@ -39,6 +39,12 @@ const surveyData = (state = defaultSurveyData, action) => {
         console.log(objectCopy);
         return objectCopy;
     }
+    else if (action.type === 'ADD_COMMENTS_INPUT') {
+        const objectCopy = { ...state };
+        objectCopy.comments = action.payload;
+        console.log(objectCopy);
+        return objectCopy;
+    }
     return state;
 }
 

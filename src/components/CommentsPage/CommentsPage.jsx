@@ -23,14 +23,14 @@ function CommentsPage() {
         <>
             <h5>3 of 4 pages</h5>
             <p>Any comments you want to leave?</p>
-            {/* form to pick a radio button from 1-5. on submit, go to handleClickEvent function */}
+            {/* form to add some text in a field */}
             <form onSubmit={handleClickEvent}>
-                    <input
-                        onChange={(event) => setCommentsChoice(event.target.value)}
-                        type="text"
-                        value={commentsChoice}
-                        placeholder="Anything else? This part is optional."
-                        name="comments-value" />
+                <input
+                    onChange={(event) => setCommentsChoice(event.target.value)}
+                    type="text"
+                    value={commentsChoice}
+                    placeholder="Anything else? This part is optional."
+                    name="comments-value" />
                 <br />
                 <button type="submit">Next</button>
             </form>

@@ -1,8 +1,5 @@
 //Page 5 of survey
 import { useHistory } from 'react-router-dom';
-import { useState } from 'react';
-import { useSelector } from 'react-redux';
-import axios from 'axios';
 
 function ThankYouPage() {
     //attach a variable to useHistory method
@@ -12,13 +9,11 @@ function ThankYouPage() {
     const handleClickEvent = () => {
         history.push('/'); //move to the designated page
     }
-
     return (
         <>
             <h1>Thank You! Your feedback has been submitted!</h1>
             <button onClick={handleClickEvent}>Leave New Feedback</button>
         </>
-
     );
 }
 

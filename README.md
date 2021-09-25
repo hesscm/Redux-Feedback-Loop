@@ -28,7 +28,7 @@ Additional README details can be found [here](https://github.com/PrimeAcademy/re
         - [x] create a axios post request
         - [x] create a post route in the server
     - [x] create thank you page(this button routes to beginning)
-- [ ] all inputs are validated except for comments page
+- [x] all inputs are validated except for comments page
 - [x] temporarily store answers in a redux store
 
 ### Stretch Goals

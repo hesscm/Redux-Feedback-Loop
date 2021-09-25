@@ -27,25 +27,25 @@ const surveyData = (state = defaultSurveyData, action) => {
         //ALTERNATIVE: this breaks it and not sure why. I've tried a few variations of this with no success.
         // return {...state, {...state.feeling: action.payload}} 
     }
-    else if (action.type === 'ADD_UNDERSTANDING_INPUT') {
+    else if (action.type === 'ADD_UNDERSTANDING_INPUT') { //update understanding property
         const objectCopy = { ...state };
         objectCopy.understanding = action.payload;
         console.log(objectCopy);
         return objectCopy;
     }
-    else if (action.type === 'ADD_SUPPORTED_INPUT') {
+    else if (action.type === 'ADD_SUPPORTED_INPUT') { //update support property
         const objectCopy = { ...state };
         objectCopy.support = action.payload;
         console.log(objectCopy);
         return objectCopy;
     }
-    else if (action.type === 'ADD_COMMENTS_INPUT') {
+    else if (action.type === 'ADD_COMMENTS_INPUT') { //update comments property
         const objectCopy = { ...state };
         objectCopy.comments = action.payload;
         console.log(objectCopy);
         return objectCopy;
     }
-    else if (action.type === 'CLEAR_ALL_INPUTS') {
+    else if (action.type === 'CLEAR_ALL_INPUTS') { //clear the state
         return defaultSurveyData;
     }
     return state;

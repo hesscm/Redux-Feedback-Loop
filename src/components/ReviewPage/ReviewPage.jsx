@@ -18,7 +18,7 @@ function ReviewPage() {
             alert('Something seems to be missing. Please go back and double check the first 3 pages.')
         }
         else {
-            axios({
+            axios({ //post feedback to the server
                 method: 'POST',
                 url: '/feedback',
                 data: {
@@ -27,17 +27,16 @@ function ReviewPage() {
                     support: reduxStore.surveyData.support,
                     comments: reduxStore.surveyData.comments
                 }
-            }).then((response) => {
+            }).then((response) => { //clear the state, and go to the /thanks page
                 const action = { type: 'CLEAR_ALL_INPUTS' }
                 dispatch(action);
                 history.push('/thanks');
-            }).catch((error) => {
+            }).catch((error) => { //log error
                 alert('Error in handleCompleteSurvey.')
                 console.log(error);
             })
         }
     }
-
     return (
         <>
             <h3>Review Your Feedback</h3>

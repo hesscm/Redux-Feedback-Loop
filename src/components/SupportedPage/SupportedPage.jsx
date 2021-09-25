@@ -16,13 +16,13 @@ function SupportedPage() {
         console.log('supported choice', numberChoice);
         const action = ({ type: 'ADD_SUPPORTED_INPUT', payload: numberChoice })
         dispatch(action); //send to redux
-        history.push('/supported'); //move to the designated page
+        history.push('/comments'); //move to the designated page
     }
 
     return (
         <>
-            <h5>2 of 4 pages</h5>
-            <p>How well are you supported the content?</p>
+            <h5>3 of 4 pages</h5>
+            <p>How well are you being supported?</p>
             {/* form to pick a radio button from 1-5. on submit, go to handleClickEvent function */}
             <form onSubmit={handleClickEvent}>
                 <div>

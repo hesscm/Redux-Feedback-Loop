@@ -7,6 +7,7 @@ import logger from 'redux-logger';
 import { createStore, combineReducers, applyMiddleware } from 'redux';
 import { Provider } from 'react-redux';
 
+//default object for surveyData reducer
 const defaultSurveyData = {
     feeling: 0,
     understanding: 0,
@@ -16,17 +17,25 @@ const defaultSurveyData = {
 
 //reducer to temporarily store survery answers
 const surveyData = (state = defaultSurveyData, action) => {
-    //in surveyData reducer
+    console.log('in surveyData reducer');
     if (action.type === 'ADD_FEELING_INPUT') {
-        const objectCopy = {...state};
-        objectCopy.feeling = action.payload;
+        const objectCopy = { ...state }; //copy state
+        objectCopy.feeling = action.payload; //add payload to the property
         console.log(objectCopy);
-        return objectCopy;
-        // return {...state, action.payload} //this breaks it and not sure why
-    } 
+        return objectCopy; //return the new/updated object
+
+        //ALTERNATIVE: this breaks it and not sure why. I've tried a few variations of this with no success.
+        // return {...state, {...state.feeling: action.payload}} 
+    }
     else if (action.type === 'ADD_UNDERSTANDING_INPUT') {
         const objectCopy = { ...state };
         objectCopy.understanding = action.payload;
+        console.log(objectCopy);
+        return objectCopy;
+    }
+    else if (action.type === 'ADD_SUPPORTED_INPUT') {
+        const objectCopy = { ...state };
+        objectCopy.supported = action.payload;
         console.log(objectCopy);
         return objectCopy;
     }

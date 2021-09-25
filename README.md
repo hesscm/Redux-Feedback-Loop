@@ -18,9 +18,9 @@ Additional README details can be found [here](https://github.com/PrimeAcademy/re
 - [x] create database
 - [x] create pages
     - [ ] each page has a question, input field, and Next button
-    - [ ] create /feeling page
-    - [ ] create /understanding page
-    - [ ] create supported page
+    - [x] create /feeling page
+    - [x] create /understanding page
+    - [x] create supported page
     - [ ] create comments page
     - [ ] create review page
         - [ ] displays their data with a Submit button

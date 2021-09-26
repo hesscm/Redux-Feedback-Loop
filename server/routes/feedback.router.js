@@ -2,12 +2,14 @@ const express = require('express');
 const router = express.Router();
 const pool = require('../modules/pool');
 
+
+//GET request to retrieve the feedback table from the database
 router.get('/', (req, res) => {
     const sqlText = `SELECT * FROM feedback ORDER BY flagged, date DESC;`;
     pool.query(sqlText)
         .then((result) => {
             console.log(`Got stuff back from the database`, result);
-            res.send(result.rows);
+            res.send(result.rows); //send table to client
         })
         .catch((error) => {
             console.log(`Error making database query ${sqlText}`, error);

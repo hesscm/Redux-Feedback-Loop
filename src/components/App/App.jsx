@@ -8,6 +8,7 @@ import UnderstandingPage from '../UnderstandingPage/UnderstandingPage';
 import SupportedPage from '../SupportedPage/SupportedPage';
 import ReviewPage from '../ReviewPage/ReviewPage';
 import ThankYouPage from '../ThankYouPage/ThankYouPage';
+import AdminPage from '../AdminPage/AdminPage';
 
 function App() {
   return (
@@ -44,6 +45,10 @@ function App() {
 
         <Route path="/thanks">
           <ThankYouPage />
+        </Route>
+
+        <Route path="/admin">
+          <AdminPage />
         </Route>
       </Router>
     </div>

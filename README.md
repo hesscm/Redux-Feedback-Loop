@@ -33,7 +33,7 @@ Additional README details can be found [here](https://github.com/PrimeAcademy/re
 
 ### Stretch Goals
 
-- [ ] allow user to go back and edit their score
+- [x] allow user to go back and edit their score
 - [ ] Material-UI!
 - [ ] /admin page that displays the history of feedback ordered by most recent
     - [ ] delete button to delete an entry

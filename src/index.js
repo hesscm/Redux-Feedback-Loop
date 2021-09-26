@@ -7,6 +7,7 @@ import logger from 'redux-logger';
 import { createStore, combineReducers, applyMiddleware } from 'redux';
 import { Provider } from 'react-redux';
 
+
 //default object for surveyData reducer
 const defaultSurveyData = {
     feeling: 0,

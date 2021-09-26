@@ -2,6 +2,7 @@
 import { useHistory } from 'react-router-dom';
 import { useState } from 'react';
 import { useDispatch } from 'react-redux';
+import './CommentsPage.css';
 
 function CommentsPage() {
     const dispatch = useDispatch();
@@ -23,11 +24,12 @@ function CommentsPage() {
         <>
             <h5>3 of 4 pages</h5>
             <p>Any comments you want to leave?</p>
+            <p>Note: If you went backwards to get here, you'll need to reinput your comments if you hit 'Next.'</p>
             {/* form to add some text in a field */}
             <form onSubmit={handleClickEvent}>
                 <input
                     onChange={(event) => setCommentsChoice(event.target.value)}
-                    type="text"
+                    type="textarea"
                     value={commentsChoice}
                     placeholder="Anything else? This part is optional."
                     name="comments-value" />

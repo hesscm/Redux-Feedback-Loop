@@ -36,7 +36,7 @@ Additional README details can be found [here](https://github.com/PrimeAcademy/re
 - [x] allow user to go back and edit their score
 - [ ] Material-UI!
 - [x] /admin page that displays the history of feedback ordered by most recent
-    - [ ] delete button to delete an entry
-            - [ ] confirm deletion with user
+    - [x] delete button to delete an entry
+            - [x] confirm deletion with user
 - [ ] deploy to Heroku   
 

@@ -1,4 +1,5 @@
 import { useHistory } from 'react-router-dom';
+import Button from '@mui/material/Button';
 
 function HomePage() {
     //attach a variable to useHistory method
@@ -12,7 +13,7 @@ function HomePage() {
     return (
         <>
             <h2>Welcome! Please complete the feedback survey so we know how to help you better!</h2>
-            <button onClick={handleClickEvent}>Begin The Survey</button>
+            <Button variant="contained" onClick={handleClickEvent}>Begin The Survey</Button>
         </>
     );
 }

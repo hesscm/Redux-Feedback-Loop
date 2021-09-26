@@ -25,7 +25,6 @@ function AdminPage() {
 
     return (
         <>
-            {JSON.stringify(feedbackList)}
             <h1>Feedback Results!</h1>
             <table>
                 <thead>
@@ -41,7 +40,7 @@ function AdminPage() {
                 <tbody>
                     {/* loop through the list and display to DOM.  */}
                     {feedbackList.map((item) => {
-                        return <AdminPageItem key={item.id} item={item} />
+                        return <AdminPageItem key={item.id} item={item} fetchFeedbackItems={fetchFeedbackItems}/>
                     })}
                 </tbody>
             </table>

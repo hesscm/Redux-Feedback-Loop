@@ -19,13 +19,14 @@ const defaultSurveyData = {
 const surveyData = (state = defaultSurveyData, action) => {
     console.log('in surveyData reducer');
     if (action.type === 'ADD_FEELING_INPUT') {
-        const objectCopy = { ...state }; //copy state
-        objectCopy.feeling = action.payload; //add payload to the property
-        console.log(objectCopy);
-        return objectCopy; //return the new/updated object
+        // const objectCopy = { ...state }; //copy state
+        // objectCopy.feeling = action.payload; //add payload to the property
+        // console.log(objectCopy);
+        // return objectCopy; //return the new/updated object
 
         //ALTERNATIVE: this breaks it and not sure why. I've tried a few variations of this with no success.
-        // return {...state, {...state.feeling: action.payload}} 
+        //UPDATE: figured this part out. I'll keep both ways just to show my process.
+        return { ...state, feeling: action.payload }
     }
     else if (action.type === 'ADD_UNDERSTANDING_INPUT') { //update understanding property
         const objectCopy = { ...state };

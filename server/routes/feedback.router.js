@@ -36,4 +36,20 @@ router.post('/', (req, res) => {
         })
 })
 
+//DELETE route to delete a specified table item from the database
+router.delete('/:id', (req, res) => {
+    let reqId = req.params.id; //grab id 
+    console.log('Delete request for id', reqId);
+    let sqlText = 'DELETE FROM "feedback" WHERE "id"=$1;'
+    pool.query(sqlText, [reqId]) //send to database
+        .then((result) => {
+            console.log('Feedback deleted');
+            res.sendStatus(200); //return OK
+        })
+        .catch((error) => { //catch error
+            console.log(`Error making database query ${sqlText}`, error);
+            res.sendStatus(500);
+        })
+})
+
 module.exports = router;

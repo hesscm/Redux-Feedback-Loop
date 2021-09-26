@@ -4,6 +4,12 @@ import { useState } from 'react';
 import { useDispatch } from 'react-redux';
 import Button from '@mui/material/Button';
 import Typography from '@mui/material/Typography';
+//new radio form imports
+import Radio from '@mui/material/Radio';
+import RadioGroup from '@mui/material/RadioGroup';
+import FormControlLabel from '@mui/material/FormControlLabel';
+import FormControl from '@mui/material/FormControl';
+import FormLabel from '@mui/material/FormLabel';
 
 function SupportedPage() {
     const dispatch = useDispatch();
@@ -33,36 +39,45 @@ function SupportedPage() {
             <Typography variant="h5">How well are you being supported?</Typography> 
             <br />
             {/* form to pick a radio button from 1-5. on submit, go to handleClickEvent function */}
+            {/* MUI update: could not get this to work with FormControl alone */}
             <form onSubmit={handleClickEvent}>
-                <div>
-                    <input
-                        onChange={(event) => setNumberChoice(event.target.value)}
-                        type="radio"
-                        value="1"
-                        name="supported-value" />1
-                    <input
-                        onChange={(event) => setNumberChoice(event.target.value)}
-                        type="radio"
-                        value="2"
-                        name="supported-value" />2
-                    <input
-                        onChange={(event) => setNumberChoice(event.target.value)}
-                        type="radio"
-                        value="3"
-                        name="supported-value" />3
-                    <input
-                        onChange={(event) => setNumberChoice(event.target.value)}
-                        type="radio"
-                        value="4"
-                        name="supported-value" />4
-                    <input
-                        onChange={(event) => setNumberChoice(event.target.value)}
-                        type="radio"
-                        value="5"
-                        name="supported-value" />5
-                </div>
-                <br />
-                <Button variant="contained" type="submit">Next</Button>
+                <FormControl component="fieldset">
+                    <FormLabel component="legend">Awful --> Awesome!</FormLabel>
+                    <RadioGroup row>
+                        <FormControlLabel
+                            value="1"
+                            control={<Radio />}
+                            label="1"
+                            onChange={(event) => setNumberChoice(event.target.value)}
+                        />
+                        <FormControlLabel
+                            value="2"
+                            control={<Radio />}
+                            label="2"
+                            onChange={(event) => setNumberChoice(event.target.value)}
+                        />
+                        <FormControlLabel
+                            value="3"
+                            control={<Radio />}
+                            label="3"
+                            onChange={(event) => setNumberChoice(event.target.value)}
+                        />
+                        <FormControlLabel
+                            value="4"
+                            control={<Radio />}
+                            label="4"
+                            onChange={(event) => setNumberChoice(event.target.value)}
+                        />
+                        <FormControlLabel
+                            value="5"
+                            control={<Radio />}
+                            label="5"
+                            onChange={(event) => setNumberChoice(event.target.value)}
+                        />
+                    </RadioGroup>
+                    <br />
+                    <Button type="submit" variant="contained">Next</Button>
+                </FormControl>
             </form>
         </>
     );

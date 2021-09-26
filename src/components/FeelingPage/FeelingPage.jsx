@@ -4,6 +4,13 @@ import { useState } from 'react';
 import { useDispatch } from 'react-redux';
 import Button from '@mui/material/Button';
 import Typography from '@mui/material/Typography';
+//new radio form imports
+import Radio from '@mui/material/Radio';
+import RadioGroup from '@mui/material/RadioGroup';
+import FormControlLabel from '@mui/material/FormControlLabel';
+import FormControl from '@mui/material/FormControl';
+import FormLabel from '@mui/material/FormLabel';
+
 
 function FeelingPage() {
     const dispatch = useDispatch();
@@ -15,6 +22,7 @@ function FeelingPage() {
     //tell the button what to do when clicked
     const handleClickEvent = (event) => {
         event.preventDefault(); //stop page from refreshing
+        console.log('in handleClickEvent');
         //ensure the user selects an option
         if (numberChoice == 0) {
             alert('Please select a number.')
@@ -30,39 +38,50 @@ function FeelingPage() {
     return (
         <>
             <Typography variant="subtitle2">1 of 4 pages</Typography>
+            <br />
             <Typography variant="h5">How are you feeling today?</Typography>
+            <br />
 
             {/* form to pick a radio button from 1-5. on submit, go to handleClickEvent function */}
+            {/* MUI update: could not get this to work with FormControl alone */}
             <form onSubmit={handleClickEvent}>
-                <div>
-                    <input
-                        onChange={(event) => setNumberChoice(event.target.value)}
-                        type="radio"
-                        value="1"
-                        name="feeling-value" />1
-                    <input
-                        onChange={(event) => setNumberChoice(event.target.value)}
-                        type="radio"
-                        value="2"
-                        name="feeling-value" />2
-                    <input
-                        onChange={(event) => setNumberChoice(event.target.value)}
-                        type="radio"
-                        value="3"
-                        name="feeling-value" />3
-                    <input
-                        onChange={(event) => setNumberChoice(event.target.value)}
-                        type="radio"
-                        value="4"
-                        name="feeling-value" />4
-                    <input
-                        onChange={(event) => setNumberChoice(event.target.value)}
-                        type="radio"
-                        value="5"
-                        name="feeling-value" />5
-                </div>
-                <br />
-                <Button type="submit" variant="contained">Next</Button>
+                <FormControl component="fieldset">
+                    <FormLabel component="legend">Awful --> Awesome!</FormLabel>
+                    <RadioGroup row>
+                        <FormControlLabel
+                            value="1"
+                            control={<Radio />}
+                            label="1"
+                            onChange={(event) => setNumberChoice(event.target.value)}
+                        />
+                        <FormControlLabel
+                            value="2"
+                            control={<Radio />}
+                            label="2"
+                            onChange={(event) => setNumberChoice(event.target.value)}
+                        />
+                        <FormControlLabel
+                            value="3"
+                            control={<Radio />}
+                            label="3"
+                            onChange={(event) => setNumberChoice(event.target.value)}
+                        />
+                        <FormControlLabel
+                            value="4"
+                            control={<Radio />}
+                            label="4"
+                            onChange={(event) => setNumberChoice(event.target.value)}
+                        />
+                        <FormControlLabel
+                            value="5"
+                            control={<Radio />}
+                            label="5"
+                            onChange={(event) => setNumberChoice(event.target.value)}
+                        />
+                    </RadioGroup>
+                    <br />
+                    <Button type="submit" variant="contained">Next</Button>
+                </FormControl>
             </form>
         </>
     );

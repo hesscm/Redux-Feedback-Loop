@@ -3,7 +3,7 @@ import { useHistory } from 'react-router-dom';
 import { useSelector, useDispatch } from 'react-redux';
 import axios from 'axios';
 import Button from '@mui/material/Button';
-
+import Typography from '@mui/material/Typography';
 
 function ReviewPage() {
     const reduxStore = useSelector(store => store);
@@ -41,11 +41,13 @@ function ReviewPage() {
     }
     return (
         <>
-            <h3>Review Your Feedback</h3>
-            <h5>Feelings: {reduxStore.surveyData.feeling}/5</h5>
-            <h5>Understanding: {reduxStore.surveyData.understanding}/5</h5>
-            <h5>Support: {reduxStore.surveyData.support}/5</h5>
-            <h5>Comments: {reduxStore.surveyData.comments}</h5>
+            <Typography variant="h3">Review Your Feedback</Typography>
+            <br />
+            <Typography variant="h5">Feelings: {reduxStore.surveyData.feeling}/5</Typography>
+            <Typography variant="h5">Understanding: {reduxStore.surveyData.understanding}/5</Typography>
+            <Typography variant="h5">Support: {reduxStore.surveyData.support}/5</Typography>
+            <Typography variant="h5">Comments: {reduxStore.surveyData.comments}</Typography>
+            <br />
             <Button variant="contained" onClick={handleCompleteSurvey}>Submit</Button>
         </>
     )

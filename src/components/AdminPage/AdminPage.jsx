@@ -2,6 +2,7 @@ import AdminPageItem from "./AdminPageItem";
 import axios from 'axios';
 import { useState, useEffect } from 'react';
 import './AdminPage.css'
+import Typography from '@mui/material/Typography';
 
 
 function AdminPage() {
@@ -26,7 +27,7 @@ function AdminPage() {
 
     return (
         <>
-            <h1>Feedback Results!</h1>
+            <Typography variant="h3">Feedback Results!</Typography>
             
             <table>
                 <thead>

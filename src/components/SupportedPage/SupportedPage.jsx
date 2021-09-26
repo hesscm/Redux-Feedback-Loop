@@ -3,7 +3,7 @@ import { useHistory } from 'react-router-dom';
 import { useState } from 'react';
 import { useDispatch } from 'react-redux';
 import Button from '@mui/material/Button';
-
+import Typography from '@mui/material/Typography';
 
 function SupportedPage() {
     const dispatch = useDispatch();
@@ -28,8 +28,8 @@ function SupportedPage() {
 
     return (
         <>
-            <h5>3 of 4 pages</h5>
-            <p>How well are you being supported?</p>
+            <Typography variant="subtitle2">3 of 4 pages</Typography>
+            <Typography variant="h5">How well are you being supported?</Typography>
             {/* form to pick a radio button from 1-5. on submit, go to handleClickEvent function */}
             <form onSubmit={handleClickEvent}>
                 <div>

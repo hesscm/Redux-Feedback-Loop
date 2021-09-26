@@ -4,8 +4,8 @@ import { useState } from 'react';
 import { useDispatch } from 'react-redux';
 import './CommentsPage.css';
 import Button from '@mui/material/Button';
-
-
+import TextField from '@mui/material/TextField';
+import Typography from '@mui/material/Typography';
 
 function CommentsPage() {
     const dispatch = useDispatch();
@@ -25,19 +25,24 @@ function CommentsPage() {
 
     return (
         <>
-            <h5>3 of 4 pages</h5>
-            <p>Any comments you want to leave?</p>
-            <p>Note: If you went backwards to get here, you'll need to reinput your comments if you hit 'Next.'</p>
+            <Typography variant="subtitle2">3 of 4 pages</Typography>
+            <Typography variant="h5">Any comments you want to leave?</Typography>
             {/* form to add some text in a field */}
-            <form onSubmit={handleClickEvent}>
-                <input
+            <form  className="comments-input" onSubmit={handleClickEvent}>
+                <TextField
                     onChange={(event) => setCommentsChoice(event.target.value)}
-                    type="textarea"
-                    value={commentsChoice}
-                    placeholder="Anything else? This part is optional."
+                    variant="filled"
+                    multiline
+                    fullWidth
+                    maxRows={5}
+                    label="Optional"
+                    // value={commentsChoice}
                     name="comments-value" />
                 <br />
                 <Button variant="contained" type="submit">Next</Button>
+
+                <Typography variant="subtitle2">Note: If you went backwards to get here, you'll need to reinput your comments if you hit 'Next.'</Typography>
+
 
             </form>
         </>

@@ -1,5 +1,7 @@
 //Page 5 of survey
 import { useHistory } from 'react-router-dom';
+import Button from '@mui/material/Button';
+import Typography from '@mui/material/Typography';
 
 function ThankYouPage() {
     //attach a variable to useHistory method
@@ -11,8 +13,9 @@ function ThankYouPage() {
     }
     return (
         <>
-            <h1>Thank You! Your feedback has been submitted!</h1>
-            <button onClick={handleClickEvent}>Leave New Feedback</button>
+            <Typography variant="h5">Thank You! Your feedback has been submitted!</Typography>
+            <br />
+            <Button variant="contained" onClick={handleClickEvent}>Leave New Feedback</Button>
         </>
     );
 }

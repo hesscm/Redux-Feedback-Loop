@@ -3,7 +3,7 @@ import { useHistory } from 'react-router-dom';
 import { useState } from 'react';
 import { useDispatch } from 'react-redux';
 import Button from '@mui/material/Button';
-
+import Typography from '@mui/material/Typography';
 
 function FeelingPage() {
     const dispatch = useDispatch();
@@ -29,8 +29,9 @@ function FeelingPage() {
 
     return (
         <>
-            <h5>1 of 4 pages</h5>
-            <p>How are you feeling today?</p>
+            <Typography variant="subtitle2">1 of 4 pages</Typography>
+            <Typography variant="h5">How are you feeling today?</Typography>
+
             {/* form to pick a radio button from 1-5. on submit, go to handleClickEvent function */}
             <form onSubmit={handleClickEvent}>
                 <div>

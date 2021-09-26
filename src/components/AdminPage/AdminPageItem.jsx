@@ -3,6 +3,9 @@ const moment = require('moment'); //format time with moment.js
 import Button from '@mui/material/Button';
 //Source: https://github.com/jonatanklosko/material-ui-confirm
 import { useConfirm } from 'material-ui-confirm';
+import TableCell from '@mui/material/TableCell';
+import TableRow from '@mui/material/TableRow';
+
 
 //created to help manipulate individual items in the table
 function AdminPageItem({ item, fetchFeedbackItems }) {
@@ -19,7 +22,7 @@ function AdminPageItem({ item, fetchFeedbackItems }) {
                 axios.delete(`/feedback/${item.id}`) //send delete request to server with this entry ID
                     .then(response => { //then refresh DOM
                         console.log('cleared feedback item', response);
-                        fetchFeedbackItems(); 
+                        fetchFeedbackItems();
                     })
                     .catch(error => { //throw an error message
                         console.log('error clearing feedback item', error);
@@ -29,14 +32,14 @@ function AdminPageItem({ item, fetchFeedbackItems }) {
     }
 
     return (
-        <tr>
-            <td>{item.feeling}</td>
-            <td>{item.understanding}</td>
-            <td>{item.support}</td>
-            <td>{item.comments}</td>
-            <td>{formattedDate}</td>
-            <td><Button variant="contained" onClick={handleDelete}>Delete</Button></td>
-        </tr>
+        <TableRow>
+            <TableCell align="center">{item.feeling}</TableCell>
+            <TableCell align="center">{item.understanding}</TableCell>
+            <TableCell align="center">{item.support}</TableCell>
+            <TableCell align="center">{item.comments}</TableCell>
+            <TableCell align="center">{formattedDate}</TableCell>
+            <TableCell align="center"><Button variant="contained" onClick={handleDelete}>Delete</Button></TableCell>
+        </TableRow>
     );
 }
 

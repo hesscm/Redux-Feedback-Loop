@@ -27,6 +27,7 @@ function CommentsPage() {
         <>
             <Typography variant="subtitle2">3 of 4 pages</Typography>
             <Typography variant="h5">Any comments you want to leave?</Typography>
+            <br />
             {/* form to add some text in a field */}
             <form  className="comments-input" onSubmit={handleClickEvent}>
                 <TextField
@@ -39,8 +40,9 @@ function CommentsPage() {
                     // value={commentsChoice}
                     name="comments-value" />
                 <br />
+                <br />
                 <Button variant="contained" type="submit">Next</Button>
-
+                <br /> <br />
                 <Typography variant="subtitle2">Note: If you went backwards to get here, you'll need to reinput your comments if you hit 'Next.'</Typography>
 
 

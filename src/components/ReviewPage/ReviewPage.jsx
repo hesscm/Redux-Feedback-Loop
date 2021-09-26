@@ -4,6 +4,9 @@ import { useSelector, useDispatch } from 'react-redux';
 import axios from 'axios';
 import Button from '@mui/material/Button';
 import Typography from '@mui/material/Typography';
+import Alert from '@mui/material/Alert';
+import { render } from 'react-dom';
+
 
 function ReviewPage() {
     const reduxStore = useSelector(store => store);
@@ -16,7 +19,7 @@ function ReviewPage() {
         if (reduxStore.surveyData.feeling == 0 ||
             reduxStore.surveyData.understanding == 0 ||
             reduxStore.surveyData.support == 0) {
-
+                
             alert('Something seems to be missing. Please go back and double check the first 3 pages.')
         }
         else {

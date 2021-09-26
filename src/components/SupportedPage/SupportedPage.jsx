@@ -28,8 +28,10 @@ function SupportedPage() {
 
     return (
         <>
-            <Typography variant="subtitle2">3 of 4 pages</Typography>
-            <Typography variant="h5">How well are you being supported?</Typography>
+            <Typography variant="subtitle2">3 of 4 pages</Typography> 
+            <br />
+            <Typography variant="h5">How well are you being supported?</Typography> 
+            <br />
             {/* form to pick a radio button from 1-5. on submit, go to handleClickEvent function */}
             <form onSubmit={handleClickEvent}>
                 <div>

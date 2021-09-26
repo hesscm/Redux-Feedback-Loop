@@ -23,6 +23,7 @@ function AdminPage() {
         <>
         <h1>Feedback Results!</h1>
         <table>
+            <thead>
             <tr>
                 <th>Feeling</th>
                 <th>Comprehension</th>
@@ -30,6 +31,7 @@ function AdminPage() {
                 <th>Comments</th>   
                 <th>Delete</th>
             </tr>
+            </thead>
             <tbody>
 
             </tbody>

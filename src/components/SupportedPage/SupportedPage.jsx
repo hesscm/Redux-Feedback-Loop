@@ -2,6 +2,8 @@
 import { useHistory } from 'react-router-dom';
 import { useState } from 'react';
 import { useDispatch } from 'react-redux';
+import Button from '@mui/material/Button';
+
 
 function SupportedPage() {
     const dispatch = useDispatch();
@@ -58,7 +60,7 @@ function SupportedPage() {
                         name="supported-value" />5
                 </div>
                 <br />
-                <button type="submit">Next</button>
+                <Button variant="contained" type="submit">Next</Button>
             </form>
         </>
     );

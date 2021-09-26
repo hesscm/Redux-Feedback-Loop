@@ -9,13 +9,15 @@ import SupportedPage from '../SupportedPage/SupportedPage';
 import ReviewPage from '../ReviewPage/ReviewPage';
 import ThankYouPage from '../ThankYouPage/ThankYouPage';
 import AdminPage from '../AdminPage/AdminPage';
+import Typography from '@mui/material/Typography';
+
 
 function App() {
   return (
     <div className='App'>
       <header className='App-header'>
-        <h1 className='App-title'>Feedback!</h1>
-        <h4>Don't forget it!</h4>
+        <Typography variant="h3" className='App-title'>Feedback!</Typography>
+        <Typography variant="h5">Don't forget it!</Typography>
       </header>
       {/* start router and run components associated with each url. First page shown is HomePage.jsx */}
       <Router>

@@ -3,6 +3,9 @@ import { useHistory } from 'react-router-dom';
 import { useState } from 'react';
 import { useDispatch } from 'react-redux';
 import './CommentsPage.css';
+import Button from '@mui/material/Button';
+
+
 
 function CommentsPage() {
     const dispatch = useDispatch();
@@ -34,7 +37,8 @@ function CommentsPage() {
                     placeholder="Anything else? This part is optional."
                     name="comments-value" />
                 <br />
-                <button type="submit">Next</button>
+                <Button variant="contained" type="submit">Next</Button>
+
             </form>
         </>
     );

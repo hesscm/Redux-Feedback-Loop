@@ -2,6 +2,8 @@
 import { useHistory } from 'react-router-dom';
 import { useSelector, useDispatch } from 'react-redux';
 import axios from 'axios';
+import Button from '@mui/material/Button';
+
 
 function ReviewPage() {
     const reduxStore = useSelector(store => store);
@@ -44,7 +46,7 @@ function ReviewPage() {
             <h5>Understanding: {reduxStore.surveyData.understanding}/5</h5>
             <h5>Support: {reduxStore.surveyData.support}/5</h5>
             <h5>Comments: {reduxStore.surveyData.comments}</h5>
-            <button onClick={handleCompleteSurvey}>Submit</button>
+            <Button variant="contained" onClick={handleCompleteSurvey}>Submit</Button>
         </>
     )
 }

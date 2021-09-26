@@ -1,5 +1,12 @@
 import { useHistory } from 'react-router-dom';
 import Button from '@mui/material/Button';
+// import '@fontsource/roboto/300.css';
+import '@fontsource/roboto/400.css';
+// import '@fontsource/roboto/500.css';
+// import '@fontsource/roboto/700.css';
+import Typography from '@mui/material/Typography';
+
+
 
 function HomePage() {
     //attach a variable to useHistory method
@@ -12,7 +19,8 @@ function HomePage() {
     }
     return (
         <>
-            <h2>Welcome! Please complete the feedback survey so we know how to help you better!</h2>
+            <Typography variant="h5" >Welcome! Please complete the feedback survey so we know how to help you better!</Typography>
+            <br />
             <Button variant="contained" onClick={handleClickEvent}>Begin The Survey</Button>
         </>
     );

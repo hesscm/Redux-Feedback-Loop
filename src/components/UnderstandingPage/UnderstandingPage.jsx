@@ -2,6 +2,7 @@
 import { useHistory } from 'react-router-dom';
 import { useState } from 'react';
 import { useDispatch } from 'react-redux';
+import Button from '@mui/material/Button';
 
 function UnderstandingPage() {
     const dispatch = useDispatch();
@@ -59,7 +60,7 @@ function UnderstandingPage() {
                         name="understanding-value" />5
                 </div>
                 <br />
-                <button type="submit">Next</button>
+                <Button variant="contained" type="submit">Next</Button>
             </form>
         </>
     );

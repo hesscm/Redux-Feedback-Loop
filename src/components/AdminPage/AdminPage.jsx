@@ -3,6 +3,7 @@ import axios from 'axios';
 import { useState, useEffect } from 'react';
 import './AdminPage.css'
 
+
 function AdminPage() {
     //set variable to hold feedback from the database
     const [feedbackList, setFeedbackList] = useState([]);
@@ -26,6 +27,7 @@ function AdminPage() {
     return (
         <>
             <h1>Feedback Results!</h1>
+            
             <table>
                 <thead>
                     <tr>

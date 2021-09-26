@@ -2,6 +2,8 @@
 import { useHistory } from 'react-router-dom';
 import { useState } from 'react';
 import { useDispatch } from 'react-redux';
+import Button from '@mui/material/Button';
+
 
 function FeelingPage() {
     const dispatch = useDispatch();
@@ -59,7 +61,7 @@ function FeelingPage() {
                         name="feeling-value" />5
                 </div>
                 <br />
-                <button type="submit">Next</button>
+                <Button type="submit" variant="contained">Next</Button>
             </form>
         </>
     );

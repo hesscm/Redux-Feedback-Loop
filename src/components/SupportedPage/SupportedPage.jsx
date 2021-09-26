@@ -42,7 +42,7 @@ function SupportedPage() {
             {/* MUI update: could not get this to work with FormControl alone */}
             <form onSubmit={handleClickEvent}>
                 <FormControl component="fieldset">
-                    <FormLabel component="legend">Awful --> Awesome!</FormLabel>
+                    <FormLabel component="legend">Awful &rarr; Awesome!</FormLabel>
                     <RadioGroup row>
                         <FormControlLabel
                             value="1"

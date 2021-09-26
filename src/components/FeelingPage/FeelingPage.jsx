@@ -41,12 +41,11 @@ function FeelingPage() {
             <br />
             <Typography variant="h5">How are you feeling today?</Typography>
             <br />
-
             {/* form to pick a radio button from 1-5. on submit, go to handleClickEvent function */}
             {/* MUI update: could not get this to work with FormControl alone */}
             <form onSubmit={handleClickEvent}>
-                <FormControl component="fieldset">
-                    <FormLabel component="legend">Awful --> Awesome!</FormLabel>
+                <FormControl component="fieldset">  {/*html arrow*/}
+                    <FormLabel component="legend">Awful &rarr; Awesome!</FormLabel>
                     <RadioGroup row>
                         <FormControlLabel
                             value="1"

@@ -26,6 +26,7 @@ function CommentsPage() {
     return (
         <>
             <Typography variant="subtitle2">4 of 4 pages</Typography>
+            <br />
             <Typography variant="h5">Any comments you want to leave?</Typography>
             <br />
             {/* form to add some text in a field */}

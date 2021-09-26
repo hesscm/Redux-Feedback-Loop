@@ -34,6 +34,7 @@ function AdminPage() {
                         <th>Comprehension</th>
                         <th>Support</th>
                         <th>Comments</th>
+                        <th>Date</th>
                         <th>Delete</th>
                     </tr>
                 </thead>
